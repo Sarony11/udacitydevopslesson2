@@ -1,0 +1,8 @@
+aws cloudformation create-stack --stack-name OurFirstDeploy --template-body file://1.network.yml --parameters file://1.network-parameters.json --region=us-west-2
+aws cloudformation update-stack --stack-name OurFirstDeploy --template-body file://1.network.yml --parameters file://1.network-parameters.json --region=us-west-2
+aws cloudformation delete-stack --stack-name OurFirstDeploy
+
+
+aws cloudformation create-stack --stack-name OurFirstDeploy --template-body file://2.servers.yml --parameters file://2.servers-parameters.json --region=us-west-2
+aws cloudformation update-stack --stack-name OurFirstDeploy --template-body file://1.servers.yml --parameters file://2.servers-parameters.json --region=us-west-2
+aws cloudformation update-stack --stack-name OurFirstDeploy
